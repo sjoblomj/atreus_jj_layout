@@ -148,7 +148,8 @@ def create_svg_key(x_index, y_index, key_data):
 def create_svg(layouts, outfile):
     with open(outfile, "w") as f:
         f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
-        f.write("<svg xmlns=\"http://www.w3.org/2000/svg\"\n     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n     xmlns:ev=\"http://www.w3.org/2001/xml-events\"\n     width=\"2400\" height=\"1150\">\n")
+        f.write("<svg xmlns=\"http://www.w3.org/2000/svg\"\n     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n     xmlns:ev=\"http://www.w3.org/2001/xml-events\"\n     width=\"2300\" height=\"975\">\n")
+        f.write("  <rect width=\"100%\" height=\"100%\" fill=\"white\" />\n")
         f.write("  <polyline points=\"185,20 2100,20 2290,715 1450,950 830,950 5,715 185,20\" style=\"fill:none;stroke:black;stroke-width:3;stroke-opacity:0.71\" />\n")
 
         col_num = 0
