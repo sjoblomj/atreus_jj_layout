@@ -1,5 +1,5 @@
 <a href="https://github.com/sjoblomj/atreus_jj_layout/blob/main/layout.svg">
-  <img src="https://github.com/sjoblomj/atreus_jj_layout/blob/main/layout.svg" width="100%" height="512">
+  <img src="https://github.com/sjoblomj/atreus_jj_layout/blob/main/layout.svg" style="max-width: 1200px; width:100%; max-height:509px; height: 100%" />
 </a>
 
 # Atreus jj layout
