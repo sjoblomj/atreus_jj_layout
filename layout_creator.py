@@ -14,11 +14,11 @@ SPECIAL_SYMBOLS = {
 
 # Constants relating to where the texts of different layers will appear, and to key positioning
 key_pos_offset = [100, 50, 0, 50, 100, 50, 50, 100, 50, 0, 50, 100]
-colours = {"COLEMAK": "black", "UPPER": "red", "MOVE": "green", "FUN": "blue"}
-anchors = {"COLEMAK": "start", "UPPER": "start", "MOVE": "middle", "FUN": "end"}
-font_size = {"COLEMAK": 35, "UPPER": 25, "MOVE": 25, "FUN": 25}
-x_positions = {"COLEMAK": 250, "UPPER": 240, "MOVE": 300, "FUN": 360}
-y_positions = {"COLEMAK": 160, "UPPER": 71, "MOVE": 100, "FUN": 71}
+colours = {"COLEMAK": "black", "FUN": "red", "MOVE": "green", "CHAR": "blue"}
+anchors = {"COLEMAK": "start", "FUN": "start", "MOVE": "middle", "CHAR": "end"}
+font_size = {"COLEMAK": 35, "FUN": 25, "MOVE": 25, "CHAR": 25}
+x_positions = {"COLEMAK": 250, "FUN": 240, "MOVE": 300, "CHAR": 360}
+y_positions = {"COLEMAK": 160, "FUN": 71, "MOVE": 100, "CHAR": 71}
 key_size = 175
 x_key_rectangle_offset = 225
 y_key_rectangle_offset = 25

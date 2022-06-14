@@ -24,8 +24,8 @@
 
 enum {
   COLEMAK,
+  CHAR,
   FUN,
-  UPPER,
   MOVE
 };
 
@@ -108,15 +108,15 @@ KEYMAPS(
                              ,Key_J                ,Key_L                 ,Key_U                ,Key_Y                 ,Key_Oe
                              ,Key_H                ,Key_N                 ,Key_E                ,Key_I                 ,Key_O
       ,Key_Tilde             ,Key_K                ,Key_M                 ,Key_PeriodSign       ,Key_Aa                ,Key_Ae
-      ,Key_Alt               ,Key_Space            ,MO(FUN)               ,Key_CommaSign        ,Key_Question          ,Key_Enter
+      ,Key_Alt               ,Key_Space            ,MO(CHAR)              ,Key_CommaSign        ,Key_Question          ,Key_Enter
   ),
 
-  [FUN] = KEYMAP_STACKED
+  [CHAR] = KEYMAP_STACKED
   (
                               Key_SlashForward     ,Key_At                ,Key_ArrowUp          ,___                   ,Key_Dollar
                              ,Key_DoubleQuote      ,Key_ArrowLeft         ,Key_ArrowDown        ,Key_ArrowRight        ,Key_Hash
                              ,Key_LeftRoundBracket ,Key_RightRoundBracket ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_LeftSquareBracket ,Key_RightSquareBracket
-                             ,TG(UPPER)            ,___                   ,___                  ,___                   ,Key_Del               ,___
+                             ,TG(FUN)              ,___                   ,___                  ,___                   ,Key_Del               ,___
 
                              ,Key_PgUp             ,Key_7                 ,Key_8                ,Key_9                 ,Key_Equals
                              ,Key_PgDn             ,Key_4                 ,Key_5                ,Key_6                 ,Key_Star
@@ -124,7 +124,7 @@ KEYMAPS(
       ,___                   ,TG(MOVE)             ,___                   ,___                  ,Key_0                 ,Key_MinusSign
   ),
 
-  [UPPER] = KEYMAP_STACKED
+  [FUN] = KEYMAP_STACKED
   (
                               Key_SlashBackward    ,Key_MouseClickL       ,Key_MouseUp          ,Key_MouseClickM       ,Key_MouseClickR
                              ,Key_SingleQuote      ,Key_MouseLeft         ,Key_MouseDown        ,Key_MouseRight        ,Key_Percent
