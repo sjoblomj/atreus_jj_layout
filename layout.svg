@@ -199,7 +199,7 @@
     <text x="2050" y="325" font-family="Arial" font-size="25" text-anchor="middle" fill="green">→</text>
 
     <rect x="1975" y="425" rx="20" ry="20" width="150" height="150" style="fill:white;fill-opacity:0;stroke:black;stroke-width:3;stroke-opacity:0.71" />
-    <text x="2000" y="560" font-family="Arial" font-size="35" text-anchor="start" fill="black">Å</text>
+    <text x="2000" y="560" font-family="Arial" font-size="35" text-anchor="start" fill="black">Ö</text>
     <text x="2110" y="471" font-family="Arial" font-size="25" text-anchor="end" fill="blue">3</text>
     <text x="1990" y="471" font-family="Arial" font-size="25" text-anchor="start" fill="red">F3</text>
 
@@ -209,7 +209,7 @@
     <text x="2110" y="646" font-family="Arial" font-size="25" text-anchor="end" fill="blue">0</text>
 
     <rect x="2150" y="125" rx="20" ry="20" width="150" height="150" style="fill:white;fill-opacity:0;stroke:black;stroke-width:3;stroke-opacity:0.71" />
-    <text x="2175" y="260" font-family="Arial" font-size="35" text-anchor="start" fill="black">Ö</text>
+    <text x="2175" y="260" font-family="Arial" font-size="35" text-anchor="start" fill="black">Å</text>
     <text x="2285" y="171" font-family="Arial" font-size="25" text-anchor="end" fill="blue">=</text>
     <text x="2165" y="171" font-family="Arial" font-size="25" text-anchor="start" fill="red">F10</text>
     <text x="2225" y="200" font-family="Arial" font-size="25" text-anchor="middle" fill="green">Home</text>

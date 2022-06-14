@@ -105,9 +105,9 @@ KEYMAPS(
                              ,Key_Z                ,Key_X                 ,Key_C                ,Key_V                 ,Key_B                 ,Key_And
                              ,Key_Esc              ,Key_Tab               ,Key_Super            ,Key_Shift             ,Key_Bksp              ,Key_Ctrl
 
-                             ,Key_J                ,Key_L                 ,Key_U                ,Key_Y                 ,Key_Oe
+                             ,Key_J                ,Key_L                 ,Key_U                ,Key_Y                 ,Key_Aa
                              ,Key_H                ,Key_N                 ,Key_E                ,Key_I                 ,Key_O
-      ,Key_Tilde             ,Key_K                ,Key_M                 ,Key_PeriodSign       ,Key_Aa                ,Key_Ae
+      ,Key_Tilde             ,Key_K                ,Key_M                 ,Key_PeriodSign       ,Key_Oe                ,Key_Ae
       ,Key_Alt               ,Key_Space            ,MO(CHAR)              ,Key_CommaSign        ,Key_Question          ,Key_Enter
   ),
 
