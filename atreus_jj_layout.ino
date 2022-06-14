@@ -49,10 +49,11 @@ enum {
 #define Key_RightSquareBracket RALT(Key_9)                       // ]
 #define Key_RightRoundBracket  LSHIFT(Key_9)                     // )
 #define Key_RightCurlyBracket  RALT(Key_0)                       // }
-#define Key_Equals             LSHIFT(Key_0)                     // =
+#define Key_EqualSign          LSHIFT(Key_0)                     // =
 #define Key_Question           LSHIFT(Key_Minus)                 // ? Shifted !
 #define Key_SlashBackward      RALT(Key_Minus)                   // Backslash
 #define Key_PlusSign           Key_Minus                         // +
+#define Key_LeftSingleQuote    LSHIFT(Key_Equals)                // `
 #define Key_RightSingleQuote   RALT(Key_Backslash)               // ´
 #define Key_Caret              LSHIFT(Key_RightBracket)          // ^
 #define Key_Tilde              RALT(Key_RightBracket)            // ~
@@ -113,22 +114,22 @@ KEYMAPS(
 
   [CHAR] = KEYMAP_STACKED
   (
-                              Key_SlashForward     ,Key_At                ,Key_ArrowUp          ,___                   ,Key_Dollar
+                              Key_SlashForward     ,Key_At                ,Key_ArrowUp          ,Key_Euro              ,Key_Dollar
                              ,Key_DoubleQuote      ,Key_ArrowLeft         ,Key_ArrowDown        ,Key_ArrowRight        ,Key_Hash
                              ,Key_LeftRoundBracket ,Key_RightRoundBracket ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_LeftSquareBracket ,Key_RightSquareBracket
                              ,TG(FUN)              ,___                   ,___                  ,___                   ,Key_Del               ,___
 
-                             ,Key_PgUp             ,Key_7                 ,Key_8                ,Key_9                 ,Key_Equals
+                             ,Key_PgUp             ,Key_7                 ,Key_8                ,Key_9                 ,Key_EqualSign
                              ,Key_PgDn             ,Key_4                 ,Key_5                ,Key_6                 ,Key_Star
       ,Key_LeftAngleBracket  ,Key_OneOverTwo       ,Key_1                 ,Key_2                ,Key_3                 ,Key_PlusSign
-      ,___                   ,TG(MOVE)             ,___                   ,___                  ,Key_0                 ,Key_MinusSign
+      ,___                   ,TG(MOVE)             ,___                   ,Key_0                ,Key_0                 ,Key_MinusSign
   ),
 
   [FUN] = KEYMAP_STACKED
   (
                               Key_SlashBackward    ,Key_MouseClickL       ,Key_MouseUp          ,Key_MouseClickM       ,Key_MouseClickR
                              ,Key_SingleQuote      ,Key_MouseLeft         ,Key_MouseDown        ,Key_MouseRight        ,Key_Percent
-                             ,Key_RightSingleQuote ,Key_Euro              ,Key_Nae              ,Key_Noe               ,Key_Caret             ,Key_Pipe
+                             ,Key_LeftSingleQuote  ,Key_RightSingleQuote  ,Key_Nae              ,Key_Noe               ,Key_Caret             ,Key_Pipe
                              ,MoveToLayer(COLEMAK) ,___                   ,___                  ,___                   ,Key_Ins               ,___
 
                              ,Key_Home             ,Key_F7                ,Key_F8               ,Key_F9                ,Key_F10
