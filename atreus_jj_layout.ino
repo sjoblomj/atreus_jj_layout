@@ -18,9 +18,16 @@
 */
 
 #include "Kaleidoscope.h"
+#include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-ShapeShifter.h"
 
+const int MOUSE_SPEED_SLOW = 5;
+const int MOUSE_SPEED_FAST = 15;
+
+enum {
+  MACRO_MOUSE_SPEED
+};
 
 enum {
   COLEMAK,
@@ -97,6 +104,13 @@ enum {
 #define Key_MouseClickL        Key_mouseBtnL                     // McL
 #define Key_MouseClickM        Key_mouseBtnM                     // McM
 #define Key_MouseClickR        Key_mouseBtnR                     // McR
+#define Key_MouseScrollU       Key_mouseScrollUp                 // MSc↑
+#define Key_MouseScrollD       Key_mouseScrollDn                 // MSc↓
+#define Key_MouseSpeed         M(MACRO_MOUSE_SPEED)              // MSpd
+
+#define Key_Mute               Consumer_Mute                     // &#128264; 0
+#define Key_VolumeIncrease     Consumer_VolumeIncrement          // &#128264; +
+#define Key_VolumeDecrease     Consumer_VolumeDecrement          // &#128264; -
 
 KEYMAPS(
   [COLEMAK] = KEYMAP_STACKED
@@ -127,8 +141,8 @@ KEYMAPS(
 
   [FUN] = KEYMAP_STACKED
   (
-                              Key_SlashBackward    ,Key_MouseClickL       ,Key_MouseUp          ,Key_MouseClickM       ,Key_MouseClickR
-                             ,Key_SingleQuote      ,Key_MouseLeft         ,Key_MouseDown        ,Key_MouseRight        ,Key_Percent
+                              Key_SlashBackward    ,___                   ,___                  ,___                   ,___
+                             ,Key_SingleQuote      ,Key_Mute              ,Key_VolumeDecrease   ,Key_VolumeIncrease    ,Key_Percent
                              ,Key_LeftSingleQuote  ,Key_RightSingleQuote  ,Key_Nae              ,Key_Noe               ,Key_Caret             ,Key_Pipe
                              ,MoveToLayer(COLEMAK) ,___                   ,___                  ,___                   ,Key_Ins               ,___
 
@@ -140,9 +154,9 @@ KEYMAPS(
 
   [MOVE] = KEYMAP_STACKED
   (
-                              ___                  ,Key_MouseClickL       ,Key_MouseUp          ,Key_MouseClickM       ,Key_MouseClickR
-                             ,___                  ,Key_MouseLeft         ,Key_MouseDown        ,Key_MouseRight        ,___
-                             ,___                  ,___                   ,___                  ,___                   ,___                   ,___
+                              Key_MouseScrollU     ,Key_MouseClickL       ,Key_MouseUp          ,Key_MouseClickM       ,Key_MouseClickR
+                             ,Key_MouseSpeed       ,Key_MouseLeft         ,Key_MouseDown        ,Key_MouseRight        ,___
+                             ,Key_MouseScrollD     ,Key_PgUp              ,Key_PgDn             ,Key_Home              ,Key_End               ,___
                              ,MoveToLayer(COLEMAK) ,___                   ,___                  ,___                   ,___                   ,___
 
                              ,Key_PgUp             ,___                   ,Key_ArrowUp          ,___                   ,Key_Home
@@ -154,11 +168,25 @@ KEYMAPS(
 /* *LAYOUTER-STOP* */
 /* *INDENT-ON* */
 
+
 KALEIDOSCOPE_INIT_PLUGINS(
+  Macros,
   MouseKeys,
   ShapeShifter
 );
 
+const macro_t *macroAction(uint8_t macro_id, KeyEvent &event) {
+  if (keyToggledOn(event.state)) {
+    switch (macro_id) {
+      case MACRO_MOUSE_SPEED:
+        MouseKeys.speed = (MouseKeys.speed == MOUSE_SPEED_FAST) ? MOUSE_SPEED_SLOW : MOUSE_SPEED_FAST;
+        break;
+      default:
+        break;
+    }
+  }
+  return MACRO_NONE;
+}
 
 static const kaleidoscope::plugin::ShapeShifter::dictionary_t shape_shifter_dictionary[] PROGMEM = {
   {Key_Question, Key_1}, // Replace Shift+'?' with Shift+'1' => '!'
@@ -169,9 +197,8 @@ void setup() {
   Kaleidoscope.setup();
 
   MouseKeys.setSpeedLimit(25);
-  MouseKeys.speed = 2;
-  MouseKeys.accelSpeed = 5;
-  MouseKeys.accelDelay = 150;
+  MouseKeys.speed = MOUSE_SPEED_SLOW;
+  MouseKeys.accelSpeed = 0;
 
   ShapeShifter.dictionary = shape_shifter_dictionary;
 }
