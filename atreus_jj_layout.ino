@@ -108,6 +108,9 @@ enum {
 #define Key_MouseScrollD       Key_mouseScrollDn                 // MSc↓
 #define Key_MouseSpeed         M(MACRO_MOUSE_SPEED)              // MSpd
 
+#define Key_RunDebug           LALT(LSHIFT(Key_F9))              // IrD
+#define Key_RunTests           LALT(LSHIFT(Key_F10))             // IrT
+#define Key_FocusSearchBar     LALT(Key_D)                       // FSB
 #define Key_Mute               Consumer_Mute                     // &#128264; 0
 #define Key_VolumeIncrease     Consumer_VolumeIncrement          // &#128264; +
 #define Key_VolumeDecrease     Consumer_VolumeDecrement          // &#128264; -
@@ -141,7 +144,7 @@ KEYMAPS(
 
   [FUN] = KEYMAP_STACKED
   (
-                              Key_SlashBackward    ,___                   ,___                  ,___                   ,___
+                              Key_SlashBackward    ,___                   ,Key_RunTests         ,Key_RunDebug          ,Key_FocusSearchBar
                              ,Key_SingleQuote      ,Key_Mute              ,Key_VolumeDecrease   ,Key_VolumeIncrease    ,Key_Percent
                              ,Key_LeftSingleQuote  ,Key_RightSingleQuote  ,Key_Nae              ,Key_Noe               ,Key_Caret             ,Key_Pipe
                              ,MoveToLayer(COLEMAK) ,___                   ,___                  ,___                   ,Key_Ins               ,___
