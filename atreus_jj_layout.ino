@@ -139,8 +139,8 @@ KEYMAPS(
 
                              ,Key_PgUp             ,Key_7                 ,Key_8                ,Key_9                 ,Key_EqualSign
                              ,Key_PgDn             ,Key_4                 ,Key_5                ,Key_6                 ,Key_Star
-      ,Key_LeftAngleBracket  ,Key_OneOverTwo       ,Key_1                 ,Key_2                ,Key_3                 ,Key_PlusSign
-      ,___                   ,TG(MOVE)             ,___                   ,Key_0                ,Key_0                 ,Key_MinusSign
+      ,Key_LeftAngleBracket  ,Key_RightAngleBracket,Key_1                 ,Key_2                ,Key_3                 ,Key_PlusSign
+      ,___                   ,TG(MOVE)             ,___                   ,Key_0                ,Key_Underscore        ,Key_MinusSign
   ),
 
   [FUN] = KEYMAP_STACKED
@@ -152,8 +152,8 @@ KEYMAPS(
 
                              ,Key_Home             ,Key_F7                ,Key_F8               ,Key_F9                ,Key_F10
                              ,Key_End              ,Key_F4                ,Key_F5               ,Key_F6                ,Key_F11
-      ,Key_RightAngleBracket ,Key_SectionSign      ,Key_F1                ,Key_F2               ,Key_F3                ,Key_F12
-      ,___                   ,___                  ,MoveToLayer(COLEMAK)  ,Key_PrtSc            ,___                   ,Key_Underscore
+      ,Key_OneOverTwo        ,Key_SectionSign      ,Key_F1                ,Key_F2               ,Key_F3                ,Key_F12
+      ,___                   ,___                  ,MoveToLayer(COLEMAK)  ,Key_PrtSc            ,___                   ,___
   ),
 
   [MOVE] = KEYMAP_STACKED
