@@ -13,7 +13,7 @@ This is a layout / firmware for the [Keyboardio Atreus](https://shop.keyboard.io
 * ? has a dedicated key, and pressing shift on it will produce a !.
 * Special characters are accessible from the Char and Fun layers.
 * The Fun layer can mute the volume, or increase/decrease it.
-* The Fun layer has a few dedicated shortcuts, useful for certain programs (`FSB` = Focus Search Bar in the browser, `IrT` = IntelliJ Run Tests, `IrD` = IntelliJ Run Debug).
+* The Fun layer has a few dedicated shortcuts, useful for certain programs (`FSB` = Focus Search Bar in the browser, `IrT` = IntelliJ Run Tests, `IrD` = IntelliJ Run Debug, `Isf` = IntelliJ create Scratch File).
 * The Move layer has keys for moving the cursor, Page Up and Down, and Home and End. It also has keys for controlling the mouse and clicking, as well as for scrolling up and down. It has a dedicated key for toggling the speed of the mouse between fast and slow, and while it isn't quite the same as using a proper mouse, it is not too unpleasant.
 
 ## Layout Creator
@@ -26,4 +26,3 @@ In the layout files, `#define`-directives are used to map key names to the combi
 ```
 
 This defines `Key_EqualSign` as being Left Shift + 0 (used by the firmware), and the comment tells the Layout Creator that this should be represented by `=` in the generated layout. The next line defines `Key_Question` as Left Shift + - (used by the firmware), and the comment tells the Layout creator to represent this as `?`, and `!` when shifted.
-
