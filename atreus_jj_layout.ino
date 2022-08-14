@@ -152,7 +152,7 @@ KEYMAPS(
 
                              ,Key_Home             ,Key_F7                ,Key_F8               ,Key_F9                ,Key_F10
                              ,Key_End              ,Key_F4                ,Key_F5               ,Key_F6                ,Key_F11
-      ,Key_OneOverTwo        ,Key_SectionSign      ,Key_F1                ,Key_F2               ,Key_F3                ,Key_F12
+      ,Key_SectionSign       ,Key_OneOverTwo       ,Key_F1                ,Key_F2               ,Key_F3                ,Key_F12
       ,___                   ,___                  ,MoveToLayer(COLEMAK)  ,Key_PrtSc            ,___                   ,___
   ),
 
