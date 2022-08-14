@@ -194,9 +194,20 @@ def parse_content(infile, outfile):
     layouts = read_keylayout(keymaps)
     create_svg(layouts, outfile)
 
-if len(sys.argv) == 2 and (sys.argv[1] == "-h" or sys.argv[1] == "--help" or sys.argv[1] == "-v" or sys.argv[1] == "--version"):
+def print_version():
     print("Keyboardio Layout Creator 1.0")
     print("By Johan Sjöblom")
+
+
+if len(sys.argv) == 2 and (sys.argv[1] == "-v" or sys.argv[1] == "--version"):
+    print_version()
+    exit(0)
+if len(sys.argv) == 2 and (sys.argv[1] == "-h" or sys.argv[1] == "--help"):
+    print_version()
+    print("")
+    print("Creates an SVG keyboard layout from a given keyboard definition file (*.ino)")
+    print("Usage:")
+    print(sys.argv[0] + " input_file.ino output_file.svg")
     exit(0)
 if len(sys.argv) != 3:
     print("Keyboardio Layout Creator usage:")
